@@ -1,0 +1,1 @@
+83381fbfaaec0367e8f5b5cec41c1c4ef281a8b9fede46ca6d732d402dccf8f5  multicall_cw20-aarch64.wasm

@@ -1,0 +1,1 @@
+820ff00395ea9b794afd1dcc3b143a423a94e01939c7addcfaaf8331040304ad  ./target/wasm32-unknown-unknown/release/multicall_cw20.wasm
