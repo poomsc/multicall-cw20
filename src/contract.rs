@@ -68,7 +68,6 @@ pub fn query_bulk_balance(
                     address: contract.address.to_string(),
                 })?,
             }))?;
-
         res.push(AddrBalanceResponse {
             contract_addr: contract.contract_addr.to_string(),
             address: contract.address.to_string(),
