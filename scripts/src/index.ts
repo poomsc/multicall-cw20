@@ -1,7 +1,6 @@
 import { create_wallet, execute, init, query, upload } from "./utils";
 require("dotenv").config();
-
-const wallet = create_wallet(process.env.MNEMONIC);
+const wallet = create_wallet(process.env.DEVELOP_MODE === "true" ? process.env.MNEMONIC : process.env.PRODUCTION_MNEMONIC);
 
 (async () => {
   const id = await upload(

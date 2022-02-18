@@ -14,6 +14,7 @@ import {
 } from "@terra-money/terra.js";
 import * as fs from "fs";
 const mnemonicWords = require("mnemonic-words");
+require("dotenv").config();
 
 const DELAY_TIME = 1000; // this to prevent unauthorization error
 const GAS_LIMIT = 10000000;
@@ -36,7 +37,9 @@ const networks = {
   },
 };
 
-const terra = new LCDClient(networks["testnet"]);
+const terra = new LCDClient(
+  networks[process.env.DEVELOP_MODE === "true" ? "testnet" : "mainnet"]
+);
 
 export const instantiate = async (network) => {
   return new LCDClient(networks[network]);
